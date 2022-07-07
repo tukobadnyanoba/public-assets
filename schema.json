@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "basicDetails": {
+      "type": "object",
+      "description": "basicDetails is a object containing basic attributes of the product",
+      "properties": {
+        "productName": {
+          "type": "string",
+          "description": "name is name of product"
+        },
+        "productId": {
+          "type": "integer",
+          "description": "type is type of product"
+        },
+        "price": {
+          "type": "number",
+          "description": "price is price of product"
+        }
+      },
+      "required": ["productName", "productId"]
+    },
+
+    "tags": {
+      "type": "array",
+      "description": "tags of product",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": ["basicDetails", "tags"]
+}
